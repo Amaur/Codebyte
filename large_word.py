@@ -2,7 +2,12 @@
 print("Teste 2")
 
 def largest_word(string):
-    word_split=string.split()
+    word_alpha=''
+    for c in string:
+        if(c.isalpha() or c==' '):
+            word_alpha +=c
+
+    word_split=word_alpha.split()
     large=word_split[0]
     i=0
     while (i<len(word_split)-1):
@@ -16,5 +21,5 @@ def largest_word(string):
 
 
 
-word ="determiningFor this challenge you will be  the largest word in a string "
+word ="determiningFor this challenge you will be  the largest word in a string!!!#@@@&&&%$$$!!!! "
 print(largest_word(word))
